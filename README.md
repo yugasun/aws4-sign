@@ -11,7 +11,7 @@ Signs and prepares node.js (and browser) requests using AWS Signature Version 4.
 ## Installation
 
 ```
-npm install awsv4
+npm install aws4-sign
 ```
 
 ## Example
