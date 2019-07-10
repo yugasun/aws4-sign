@@ -1,8 +1,8 @@
-## awsv4
+## aws4-sign
 
-[![Build Status](https://travis-ci.org/yugasun/awsv4.svg?branch=master)](https://travis-ci.org/yugasun/awsv4)
-<a href="https://www.npmjs.com/package/awsv4"><img src="https://img.shields.io/npm/dm/awsv4.svg" alt="Downloads"></a>
-<a href="https://www.npmjs.com/package/awsv4"><img src="https://img.shields.io/npm/v/awsv4.svg" alt="Version"></a>
+[![Build Status](https://travis-ci.org/yugasun/aws4-sign.svg?branch=master)](https://travis-ci.org/yugasun/aws4-sign)
+<a href="https://www.npmjs.com/package/aws4-sign"><img src="https://img.shields.io/npm/dm/aws4-sign.svg" alt="Downloads"></a>
+<a href="https://www.npmjs.com/package/aws4-sign"><img src="https://img.shields.io/npm/v/aws4-sign.svg" alt="Version"></a>
 
 Signs and prepares node.js (and browser) requests using AWS Signature Version 4.
 
