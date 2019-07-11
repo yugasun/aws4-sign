@@ -1,10 +1,11 @@
 {
   "name": "aws4-sign",
   "version": "0.1.1",
-  "description": "Signs and prepares requests using AWS Signature Version 4",
+  "description": "AWS Signature Version 4",
   "author": "yugasun",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
   "scripts": {
     "build": "cross-env BABEL_ENV=production babel-node build/bundle.js umd,esm,cjs",
     "test": "cross-env BABEL_ENV=test jest -c jest.config.js --rootDir=.",

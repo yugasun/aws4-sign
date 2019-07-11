@@ -23,29 +23,23 @@ async function bundle() {
             ],
         });
 
-        // 'amd' | 'cjs' | 'system' | 'es' | 'esm' | 'iife' | 'umd'
-        if (outputs.indexOf('esm') === -1) {
-            logBundle(`${logPrefix} skipping esm`);
-        } else {
-            logBundle(`${logPrefix} writing esm - ${pkg.esm}`);
-
-            await bundle.write({
-                file: pkg.module,
-                name: 'aws4',
-                format: 'esm',
-                sourcemap: true,
-            });
+        const formatMap = {
+            umd: 'index.umd.js',
+            cjs: 'index.js',
+            esm: 'index.esm.js',
         }
 
-        if (outputs.indexOf('cjs') === -1) {
-            logBundle(`${logPrefix} skipping cjs`);
-        } else {
-            logBundle(`${logPrefix} writing cjs - ${pkg.cjs}`);
+        const pkgDist = path.join(__dirname, '..', 'dist');
+
+        for (let i = 0; i < outputs.length; i += 1) {
+            const format = outputs[i];
+            const file = formatMap[format];
+            logBundle(`${logPrefix} writing ${format} - ${file}`);
 
             await bundle.write({
-                file: pkg.main,
-                name: 'aws4',
-                format: 'cjs',
+                file: `${pkgDist}/${file}`,
+                name: 'Aws4Sign',
+                format,
                 sourcemap: true,
             });
         }
