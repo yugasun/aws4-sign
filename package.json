@@ -1,6 +1,6 @@
 {
   "name": "aws4-sign",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "AWS Signature Version 4",
   "author": "yugasun",
   "main": "dist/index.js",
